@@ -1,12 +1,15 @@
 import "./App.css";
+import { ViewProvider } from "./context/ViewContext";
 import FixHeader from "./components/FixHeader";
 import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <div className='h-full overflow-hidden'>
-      <FixHeader />
-      {/* <Homepage /> */}
+    <div className='h-full overflow-hidden min-h-screen'>
+      <ViewProvider>
+        <FixHeader />
+        <Homepage />
+      </ViewProvider>
     </div>
   );
 }

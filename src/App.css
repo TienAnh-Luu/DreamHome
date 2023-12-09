@@ -3,7 +3,53 @@
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
   line-height: 1.5;
   color: #545454;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.chevron-down::after {
+  content: "\f078"; /* Unicode character for Font Awesome chevron-down */
+  font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome icons */
+  font-weight: 900;
+  font-size: 11px;
+  margin-left: 8px;
+}
+
+.long-arrow-right::before {
+  content: "\f178";
+  font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome icons */
+  font-weight: 900;
+  font-size: 15px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 16px;
+  height: 10px;
+  opacity: 0;
+  display: inline-block;
+  color: inherit;
+  transform: rotate(45deg);
+  transition: all 500ms ease;
+}
+
+.angle-right::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  position: absolute;
+  right: 5px;
+  top: 1px;
+  width: 10px;
+  height: 20px;
+  display: block;
+  color: inherit;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  z-index: 5;
 }
